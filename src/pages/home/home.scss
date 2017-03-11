@@ -1,0 +1,27 @@
+page-home {
+  	ion-grid {
+  		padding:4%!important;
+  	}
+
+  	ion-row {
+  		display: flex;
+  		justify-content: space-around;
+  	}
+
+	ion-row ion-col {
+		flex-flow: row wrap;
+		padding:0;
+		max-width:45%!important;
+		max-height: 45%!important;
+		margin:0 4% 4% 0;
+		color:#fff;
+		height:15.5rem;
+		text-align:center;
+		border-radius:2px;
+		background-color: #42c7ff;    	
+	 }
+
+	 ion-col ion-icon {
+	 	font-size: 55px;
+	 }
+}

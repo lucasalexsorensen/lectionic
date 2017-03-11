@@ -1,0 +1,18 @@
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Lectionic</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item>Schedule</button>
+      <button ion-item>Grades</button>
+
+      <br><br>
+      <button ion-item style="color: #f53d3d">Sign Out</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage"></ion-nav>

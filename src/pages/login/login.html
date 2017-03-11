@@ -1,0 +1,39 @@
+<ion-content> 
+  <div padding [@flyInBottomFast]="cloudState" id="cloud-layer">
+ 
+    <ion-row>
+      <ion-col>
+        <img [@flyInBottomSlow]="logoState" style="filter: invert();" src="assets/images/lectionic.png" />
+      </ion-col>
+    </ion-row>
+ 
+    <ion-row>
+      <ion-col>
+        <ion-list inset [@bounceInBottom]="formState">
+ 
+          <ion-item>
+            <ion-input [(ngModel)]="username" placeholder="Username" type="text"></ion-input>
+          </ion-item>
+ 
+          <ion-item>
+            <ion-input [(ngModel)]="password" placeholder="Password" type="password"></ion-input>
+          </ion-item>
+ 
+        </ion-list>
+      </ion-col>
+    </ion-row>
+ 
+    <ion-row>
+      <ion-col>
+        <button ion-button (click)="clickLogin()" type="submit" class="login-button" [@fadeIn]="loginState">
+          Login
+          <ion-spinner name="bubbles" *ngIf="fetching"></ion-spinner>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  
+ 
+  </div>
+ 
+</ion-content>

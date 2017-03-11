@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      lectionic
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="weekButtons">
+		<ion-icon color='secondary' name='arrow-back'></ion-icon>
+		<button ion-button full color="secondary">9</button>
+		<ion-icon color='secondary' name='arrow-forward'></ion-icon>
+	</div>
+    <ion-segment [(ngModel)]="dayName" color="primary">
+      <ion-segment-button value="0">
+        Mon
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        Tue
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        Wed
+      </ion-segment-button>
+      <ion-segment-button value="3">
+        Thu
+      </ion-segment-button>
+      <ion-segment-button value="4">
+        Fri
+      </ion-segment-button>
+    </ion-segment>
+	<hr>
+	<br>
+	<ion-list *ngIf="schedule[dayName]">
+		<h2 style="text-align: center;">{{schedule[dayName].date}}</h2>
+		<ion-item-group *ngFor="let lecture of schedule[dayName].lectures">
+			<ion-item-divider color='light'>{{lecture.time.start}}-{{lecture.time.end}}</ion-item-divider>
+			<ion-item>
+				<h2>{{lecture.class}}</h2>
+				<h2>{{lecture.classroom}} - {{lecture.teacher}}</h2>
+			</ion-item>
+			<p *ngFor="let hw of lecture.homework">
+				- {{hw}}
+			</p>
+			<br>
+		</ion-item-group>
+	</ion-list>
+
+</ion-content>

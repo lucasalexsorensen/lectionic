@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>
+      lectionic
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+	<br>
+	<br>
+    <ion-grid>
+    <ion-row>
+      <ion-col width-50 (click)="navToSchedule()">
+        <h2>Schedule</h2>
+        <ion-icon name='calendar'></ion-icon>
+      </ion-col>
+      <ion-col width-50>
+        <h2>Grades</h2>
+        <ion-icon name='clipboard'></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

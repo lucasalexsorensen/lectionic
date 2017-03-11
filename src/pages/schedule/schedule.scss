@@ -1,0 +1,24 @@
+page-schedule {
+	.weekButtons {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.weekButtons * {
+		flex-flow: row wrap;
+	}
+	.weekButtons {
+		justify-content: center!important;
+	}
+	.weekButtons button {
+		width: 55px;
+		font-size: 15px;
+		border-radius: 12px;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.weekButtons ion-icon {
+		color: #333;
+		font-size: 30px;
+	}
+}
